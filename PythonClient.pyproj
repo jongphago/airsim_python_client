@@ -5,16 +5,18 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e2049e20-b6dd-474e-8bca-1c8dc54725aa</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>computer_vision\cv_capture.py</StartupFile>
+    <StartupFile>my_python\module1_basic.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PythonClient</Name>
     <RootNamespace>PythonClient</RootNamespace>
-    <InterpreterId>Global|ContinuumAnalytics|Anaconda36-64</InterpreterId>
+    <InterpreterId>CondaEnv|CondaEnv|airsim</InterpreterId>
     <InterpreterVersion>
     </InterpreterVersion>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -95,6 +97,9 @@
     <Compile Include="multirotor\setup_path.py" />
     <Compile Include="multirotor\survey.py" />
     <Compile Include="multirotor\takeoff.py" />
+    <Compile Include="my_python\module1_basic.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ros\car_image_raw.py" />
     <Compile Include="ros\car_pose.py" />
     <Compile Include="ros\drone_image_raw.py" />
@@ -108,6 +113,7 @@
     <Folder Include="car\" />
     <Folder Include="computer_vision\" />
     <Folder Include="multirotor\" />
+    <Folder Include="my_python\" />
     <Folder Include="ros\" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +123,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|airsim" />
     <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
   </ItemGroup>
   <PropertyGroup>
