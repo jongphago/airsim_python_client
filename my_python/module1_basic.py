@@ -12,17 +12,14 @@ def takeoff(client):
     client.armDisarm(True)
     client.takeoffAsync().join()
 
-takeoff(client)
-
-
-
-
-
 # quit
 def quit(client):
     airsim.wait_key('Press any key to reset to original state')
     client.reset()
     client.armDisarm(False)
     client.enableApiControl(False)
+
+takeoff(client)
+
 
 quit(client)
